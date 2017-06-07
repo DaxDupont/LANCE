@@ -1,6 +1,6 @@
 ---
 ---
-## Welcome to LANCE
+# Welcome to LANCE
 
 Welcome to LANCE.
 
@@ -8,7 +8,7 @@ This document is designed for our partners in the LANCE project.
 
 This document will mostly focus on LANCE Core, as LANCE Freight plugins need to be custom made for each purpose.
 
-## Secure Prim
+### Secure Prim
 
 To use LANCE Core, you must create a secure prim. 
 
@@ -37,3 +37,13 @@ It will ping the server every 3 minutes.
 
 If the vehicle/player has not sent a ping in the last 5 minutes the system will remove them from the active list.
 
+## Inputs 
+
+### lance on 
+Turns the LANCE Core on.
+
+Make sure to sleep for 1 second after sending all the configuration commands so everything gets processed in order.
+
+```
+llMessageLinked(LINK_SET, 0, "lance on", ""); 
+```
