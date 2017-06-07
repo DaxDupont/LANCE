@@ -54,3 +54,4 @@ Set the HP which the vehicle starts with.
 _As with any configuration option, this must be set before LANCE Core is activated_
 
 **Any value above 1000 will be silently ignored.**
+ 
