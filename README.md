@@ -6,40 +6,32 @@ This document is designed for our partners in the LANCE project.
 
 This document will mostly focus on LANCE Core, as LANCE Freight plugins need to be custom made for each purpose.
 
-Here's some useful information.
-{: .info }
+## Secure Prim
 
-Make sure to watch for these pitfalls and limits.
-{: .error }
+To use LANCE Core, you must create a secure prim. 
 
-### Markdown
+A secure prim is a prim made on an account specifically for your LANCE Vehicles.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This prim will need be the root of every vehicle and must always be NO MOD and NO TRANSFER.
 
-```markdown
-Syntax highlighted code block
+The secure prim serves as your authentication as a real LANCE developer, it pulls the list from a public github.
 
-# Header 1
-## Header 2
-### Header 3
+It is not dependant on servers other than the redundant ones that github has, downtime is almost impossible.
 
-- Bulleted
-- List
+**If you distribute your secure prim MOD and/or TRANSFER, that account will be removed from the whitelist and you will have change the root prim on each vehicle.**
 
-1. Numbered
-2. List
+### Activity Pings
 
-**Bold** and _Italic_ and `Code` text
+Activity Pings are a mechanism that notifies the LANCE Freight server that a player is active.
 
-[Link](url) and ![Image](src)
-```
+They are automatically sent when all of the following are true:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+- LANCE Core is active.
+- Player is seated on the vehicle.
+- Vehicle is currently located within the Jeogeot Gulf.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DaxDupont/LANCE/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+It will ping the server every 3 minutes. 
 
-### Support or Contact
+If the vehicle/player has not sent a ping in the last 5 minutes the system will remove them from the active list.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
