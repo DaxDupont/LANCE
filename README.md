@@ -1,6 +1,6 @@
 ---
 ---
-# Welcome to LANCE
+## Welcome to LANCE
 
 Welcome to LANCE.
 
@@ -37,3 +37,21 @@ It will ping the server every 3 minutes.
 
 If the vehicle/player has not sent a ping in the last 5 minutes the system will remove them from the active list.
 
+## Inputs 
+
+### lance on 
+Turns the LANCE Core on.
+
+Make sure to sleep for 1 second after sending all the configuration commands so everything gets processed in order.
+
+```
+llMessageLinked(LINK_SET, 0, "lance on", ""); 
+```
+
+### startHP
+Set the HP which the vehicle starts with.
+
+_As with any configuration option, this must be set before LANCE Core is activated_
+
+**Any value above 1000 will be silently ignored.**
+ 
