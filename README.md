@@ -1,8 +1,16 @@
-## Welcome to GitHub Pages
+## Welcome to LANCE
 
-You can use the [editor on GitHub](https://github.com/DaxDupont/LANCE/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to LANCE.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This document is designed for our partners in the LANCE project.
+
+This document will mostly focus on LANCE Core, as LANCE Freight plugins need to be custom made for each purpose.
+
+Here's some useful information.
+{: .info }
+
+Make sure to watch for these pitfalls and limits.
+{: .error }
 
 ### Markdown
 
