@@ -47,3 +47,10 @@ Make sure to sleep for 1 second after sending all the configuration commands so 
 ```
 llMessageLinked(LINK_SET, 0, "lance on", ""); 
 ```
+
+### startHP
+Set the HP which the vehicle starts with.
+
+_As with any configuration option, this must be set before LANCE Core is activated_
+
+**Any value above 1000 will be silently ignored.**
