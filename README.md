@@ -69,6 +69,7 @@ llLinkedMessage(LINK_SET, 500, "startHP", NULL_KEY)
 
 ### bullletDamage
 Set the look up list for damage for bullet types. The id must contain a CSV list in the format of damageType,damage.
+
 The default is: 
 
 ["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]
