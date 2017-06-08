@@ -96,7 +96,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **TRP and DCG are special values. TRP will only do damage if the hitKey is passed along and does damage in full. DCG has special scaling on the Z-Axis**
 
 ```
-llLinkedMessage(LINK_SET, 500, "bulletDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
+llLinkedMessage(LINK_SET, 500, "bombDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
 ```
 
 ### mailer
