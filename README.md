@@ -47,6 +47,14 @@ Make sure to sleep for 1 second after sending all the configuration commands so 
 llMessageLinked(LINK_SET, 0, "lance on", ""); 
 ```
 
+### team
+Set the team currently in use. The number field contains the team.
+1 is USN, 2 is IJN. 0 unsets the team.
+ 
+```
+llLinkedMessage(LINK_SET, 1, "team", NULL_KEY);
+```
+
 ### startHP
 Set the HP which the vehicle starts with. The number field contains the HP.
 The default is 500.
@@ -57,4 +65,16 @@ _As with any configuration option, this must be set before LANCE Core is activat
  
 ```
 llLinkedMessage(LINK_SET, 500, "startHP", NULL_KEY)
+```
+
+### bullletDamage
+Set the look up list for damage for bullet types. The id must contain a CSV list in the format of damageType,damage.
+The default is: 
+
+["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]
+
+_As with any configuration option, this must be set before LANCE Core is activated_
+ 
+```
+llLinkedMessage(LINK_SET, 500, "bulletDamage", llList2CSV[["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]]);
 ```
