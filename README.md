@@ -48,9 +48,13 @@ llMessageLinked(LINK_SET, 0, "lance on", "");
 ```
 
 ### startHP
-Set the HP which the vehicle starts with.
+Set the HP which the vehicle starts with. The number field contains the HP.
+The default is 500.
 
 _As with any configuration option, this must be set before LANCE Core is activated_
 
 **Any value above 1000 will be silently ignored.**
  
+```
+llLinkedMessage(LINK_SET, 500, "startHP", NULL_KEY)
+```
