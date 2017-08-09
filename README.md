@@ -173,3 +173,28 @@ default {
 }
 ```
 **The LANCE bomb script will handle turning phantom/physical on explode.**
+
+## Email passthrough example script
+This is how you properly passthrough reward notifications you recieve by mail.
+You can and probably should integrate this into your rezzers instead of adding aditional scripts!
+
+Here's an example:
+
+```
+default {
+	state_entry() {
+		llSetTimerEvent(10);
+	}
+	timer() {
+		llGetNextEmail("", "KILLMAIL");	
+	}
+	email(string time, string address, string subj, string message, integer num_left) {
+		if(llGetSubString(address, -19, -1) != "@lsl.secondlife.com") return;
+		message = llDeleteSubString(message, 0, llSubStringIndex(message, "\n\n") + 1);
+		llMessageLinked(LINK_SET, 1, "rewardPassthrough", message);
+	} 
+	on_rez(integer start_param) {
+		llResetScript();	
+	}
+}
+```
