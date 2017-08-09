@@ -99,8 +99,8 @@ _As with any configuration option, this must be set before LANCE Core is activat
 llLinkedMessage(LINK_SET, 500, "bombDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
 ```
 
-### mailer
-Enables and sets the requirements for the kill mailing script. 
+### outgoingReward
+Enables and sets the requirements for the kill rewards. 
 This allows vehicles to communicate back to vehicles like the submarine that they have been taken down and awards the right amount of points.
 
 The number field holds the to be awarded points and the id fields holds a CSV list on which killed by ammotype it should send the message (IE: TRP, LBB)
@@ -110,7 +110,28 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **Any reward above 20000 will be silently ignored.**
  
 ```
-llLinkedMessage(LINK_SET, 1000, "mailer", "TRP, LBB");
+llLinkedMessage(LINK_SET, 1000, "outgoingReward", "TRP, LBB");
+```
+
+### enableIncomingReward
+Enables the incoming rewards for killing other vehicles. This should only be used on submarines and aircraft intended to destroy Freighers.
+The default is 0(FALSE/OFF).
+
+_As with any configuration option, this must be set before LANCE Core is activated_
+
+**The only options are 0 and 1.**
+ 
+```
+llLinkedMessage(LINK_SET, 1, "enableIncomingReward", NULL_KEY)
+```
+
+### rewardPassthrough
+This is a special input, since the projectiles use OBJECT_REZZER_KEY to get the origin since this is more reliable than doing both OBJECT_REZZER_KEY and OBJECT_ROOT in succesion or using llShout() on object_rez, you will need to have your object pass through values recieved by email for the backup email system. 
+
+**Use supplied email snippet to fetch new emails.**
+ 
+```
+llLinkedMessage(LINK_SET, 0, "rewardPassthrough", "EMAILCONTENTSGOHERE")
 ```
 
 ## Output
