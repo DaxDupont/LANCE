@@ -139,11 +139,20 @@ llLinkedMessage(LINK_SET, 0, "rewardPassthrough", "EMAILCONTENTSGOHERE")
 ### hp
 The sensor will send out a linked message with the string being "hp" and the number being the current health whenever it's updated.
 
+### creditsEarned
+The sensor will send out a linked message with the string being "creditsEarned" and the number being the credits earned whenever it's it gets more credits. **It doesn't return the TOTAL credits earned, but rather the credits last earned**
+
+### killsEarned
+The sensor will send out a linked message with the string being "killsEarned" and the number being the kills earned whenever it's it gets more credits. **It doesn't return the TOTAL kills earned, but rather the kills last earned**
+
 ### crash
 The sensor will send out a linked message with the string being "crash" once the vehicle HP reaches 0. 
 
 ### authcode
 The sensor will send out a linked message with the string being "authCode" and the number being the authcode you need to use a start_param while rezzing a projectile. 
+
+### banned
+The sensor will send out a linked message with the string being "banned" if the user is banned from LANCE. What you do with this information is up to you. 
 
 ## Bomb Projectile example script
 Next to the supplied bomb script, you need to have your own to guide it.
