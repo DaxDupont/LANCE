@@ -170,6 +170,8 @@ default {
 			string description = llList2String(llGetObjectDetails(llDetectedKey(num_detected), [OBJECT_DESC]),0);
 			if (llDetectedType(num_detected) & AGENT || description == "LANCE") {
 				llMessageLinked(LINK_THIS,0,"explode",llDetectedKey(num_detected));
+				FX();
+				return;
 			}
 		}
 		llMessageLinked(LINK_THIS,0,"explode",NULL_KEY);
