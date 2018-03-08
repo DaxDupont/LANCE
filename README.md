@@ -56,7 +56,7 @@ Set the team currently in use. The number field contains the team.
 1 is USN, 2 is IJN. 0 unsets the team.
  
 ```
-llLinkedMessage(LINK_SET, 1, "team", NULL_KEY);
+llMessageLinked(LINK_SET, 1, "team", NULL_KEY);
 ```
 
 ### startHP
@@ -68,7 +68,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **Any value above 1000 will be silently ignored.**
  
 ```
-llLinkedMessage(LINK_SET, 500, "startHP", NULL_KEY)
+llMessageLinked(LINK_SET, 500, "startHP", NULL_KEY)
 ```
 
 ### bulletDamage
@@ -81,7 +81,7 @@ The default is:
 _As with any configuration option, this must be set before LANCE Core is activated_
  
 ```
-llLinkedMessage(LINK_SET, 500, "bulletDamage", llList2CSV[["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]));
+llMessageLinked(LINK_SET, 500, "bulletDamage", llList2CSV[["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]));
 ```
 
 ### bombDamage
@@ -96,7 +96,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **TRP and DCG are special values. TRP will only do damage if the hitKey is passed along and does damage in full. DCG has special scaling on the Z-Axis**
 
 ```
-llLinkedMessage(LINK_SET, 500, "bombDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
+llMessageLinked(LINK_SET, 500, "bombDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
 ```
 
 ### outgoingReward
@@ -110,7 +110,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **Any reward above 20000 will be silently ignored.**
  
 ```
-llLinkedMessage(LINK_SET, 1000, "outgoingReward", "TRP, LBB");
+llMessageLinked(LINK_SET, 1000, "outgoingReward", "TRP, LBB");
 ```
 
 ### enableIncomingReward
@@ -122,7 +122,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **The only options are 0 and 1.**
  
 ```
-llLinkedMessage(LINK_SET, 1, "enableIncomingReward", NULL_KEY)
+llMessageLinked(LINK_SET, 1, "enableIncomingReward", NULL_KEY)
 ```
 
 ### rewardPassthrough
@@ -131,7 +131,7 @@ This is a special input, since the projectiles use OBJECT_REZZER_KEY to get the 
 **Use supplied email snippet to fetch new emails.**
  
 ```
-llLinkedMessage(LINK_SET, 0, "rewardPassthrough", "EMAILCONTENTSGOHERE")
+llMessageLinked(LINK_SET, 0, "rewardPassthrough", "EMAILCONTENTSGOHERE")
 ```
 
 ## Output
