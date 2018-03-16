@@ -81,7 +81,7 @@ The default is:
 _As with any configuration option, this must be set before LANCE Core is activated_
  
 ```
-llMessageLinked(LINK_SET, 500, "bulletDamage", llList2CSV[["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]));
+llMessageLinked(LINK_SET, 500, "bulletDamage", llList2CSV(["BBG",1,"SCG",10,"SMG",10,"SSG",15,"CMG",25,"LMG",10,"HMG",20,"CAN",75,"RKT",100,"FLK",10]));
 ```
 
 ### bombDamage
@@ -89,14 +89,14 @@ Set the look up list for damage for bomb types. The id must contain a CSV list i
 
 The default is: 
 
-["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]
+["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"SBB",75,"LBB",75,"MBB",125,"HBB",200,"STRP",200,"MTRP",300,"LTRP",375,"KMK",300]
 
 _As with any configuration option, this must be set before LANCE Core is activated_
  
 **TRP and DCG are special values. TRP will only do damage if the hitKey is passed along and does damage in full. DCG has special scaling on the Z-Axis**
 
 ```
-llMessageLinked(LINK_SET, 500, "bombDamage", llList2CSV[["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"LBB",75,"MBB",125,"HBB",200,"TRP",375,"KMK",300]));
+llMessageLinked(LINK_SET, 500, "bombDamage", llList2CSV(["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"SBB",75,"LBB",75,"MBB",125,"HBB",200,"STRP",200,"MTRP",300,"LTRP",375,"KMK",300]));
 ```
 
 ### outgoingReward
