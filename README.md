@@ -110,7 +110,7 @@ _As with any configuration option, this must be set before LANCE Core is activat
 **Any reward above 20000 will be silently ignored.**
  
 ```
-llMessageLinked(LINK_SET, 1000, "outgoingReward", "TRP, LBB");
+llMessageLinked(LINK_SET, 1000, "outgoingReward", "LTRP, LBB");
 ```
 
 ### enableIncomingReward
