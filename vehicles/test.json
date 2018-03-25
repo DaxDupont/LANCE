@@ -1,0 +1,7 @@
+{
+  "startHP": "500",
+  "bulletDamage": "BBG,1,SCG,10,SMG,10,SSG,15,CMG,25,LMG,10,HMG,20,CAN,75,RKT,100,FLK,10",
+	"bombDamage": "CMB,25,SMB,75,MDB,200,LGB,500,DCG,200,SBB,75,LBB,75,MBB,125,HBB,200,STRP,200,MTRP,300,LTRP,375,KMK,300",
+	"outgoingReward": "LTRP, SBB",
+	"enableIncomingReward": true
+}
