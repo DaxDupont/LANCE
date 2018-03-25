@@ -93,7 +93,7 @@ The default is:
 
 _As with any configuration option, this must be set before LANCE Core is activated_
  
-**TRP and DCG are special values. TRP will only do damage if the hitKey is passed along and does damage in full. DCG has special scaling on the Z-Axis**
+**(S/M/L)TRP, (S/L/M/H)BB and DCG are special values. (S/M/L)TRP and (S/L/M/H)BB will only do damage if the hitKey is passed along and does damage in full. DCG has special scaling on the Z-Axis**
 
 ```
 llMessageLinked(LINK_SET, 500, "bombDamage", llList2CSV(["CMB",25,"SMB",75,"MDB",200,"LGB",500,"DCG",200,"SBB",75,"LBB",75,"MBB",125,"HBB",200,"STRP",200,"MTRP",300,"LTRP",375,"KMK",300]));
@@ -103,7 +103,7 @@ llMessageLinked(LINK_SET, 500, "bombDamage", llList2CSV(["CMB",25,"SMB",75,"MDB"
 Enables and sets the requirements for the kill rewards. 
 This allows vehicles to communicate back to vehicles like the submarine that they have been taken down and awards the right amount of points.
 
-The number field holds the to be awarded points and the id fields holds a CSV list on which killed by ammotype it should send the message (IE: TRP, LBB)
+The number field holds the to be awarded points and the id fields holds a CSV list on which killed by ammotype it should send the message (IE: LTRP, SBB)
 
 _As with any configuration option, this must be set before LANCE Core is activated_
 
